@@ -11,6 +11,7 @@ export class TriggerService {
   // that was emitted immediately (or the initial value if no data has been emitted yet)
   diagnose: BehaviorSubject<any> = new BehaviorSubject(undefined);
   diagnoseObs = this.diagnose.asObservable();
+
   constructor() { }
 
   startDiagnose(){

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
@@ -8,9 +9,10 @@ import { DiagnosticsComponent } from './diagnostics/diagnostics.component';
   declarations: [
     AppComponent,
     DiagnosticsComponent
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule, ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

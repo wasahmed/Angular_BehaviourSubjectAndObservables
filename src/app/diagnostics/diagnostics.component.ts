@@ -10,6 +10,7 @@ import { TriggerService } from '../trigger.service';
 export class DiagnosticsComponent implements OnInit, OnDestroy {
   runDiagnostics: boolean;
   subscriptions: Subscription;
+  name: string;
   constructor(private triggerService :TriggerService) { 
     this.subscriptions = new Subscription();
   }
@@ -19,10 +20,12 @@ export class DiagnosticsComponent implements OnInit, OnDestroy {
       .subscribe(val => {
       this.runDiagnostics = val;
     }));
+
   }
 
   endDiagnose(){
     this.triggerService.endDiagnose();
+  
   }
  
   ngOnDestroy() {
